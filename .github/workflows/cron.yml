@@ -1,0 +1,66 @@
+name: Schedule Deploy
+
+on:
+  schedule:
+      - cron: '0 */3 * * *' # KST All-Time Every 3 Hours (0,3,6,9,12,15,18,21)
+
+jobs:
+  deploy:
+    name: Deploy by schedule cron
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - uses: volta-cli/action@v1
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v2
+        with:
+          ref: 'gh-pages'
+          path: dist
+
+      - name: NPM CI
+        run: npm ci --no-audit
+
+      - name: Build to JS
+        run: npm run build
+
+      - name: Generate Resources
+        run: npm run start
+        env: 
+          JTK_CREDENTIALS_ENC_KEY: ${{ secrets.JTK_CREDENTIALS_ENC_KEY }}
+          JTK_CREDENTIALS_ENC_IV: ${{ secrets.JTK_CREDENTIALS_ENC_IV }}
+
+      - name: Generate Index list
+        run: npm run start:gen
+      
+      - name: Archive dist artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist-archive
+          retention-days: 7
+          path: |
+            dist/**/*.html
+            !dist/index.html
+            !dist/list.html
+
+      - name: Deploy to gh-pages branch (Backup, Save)
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: dist # The folder the action should deploy.
+          clean: false
+          single-commit: false
+          token: ${{ secrets.BOT_PA_TOKEN }}
+          git-config-name: "github-actions[bot]"
+          git-config-email: "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Deploy to surge.sh (Prod)
+        uses: dswistowski/surge-sh-action@v1
+        continue-on-error: true
+        with:
+          domain: '${{ secrets.surge_domain }}'
+          project: './dist'
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}

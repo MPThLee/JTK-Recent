@@ -1,0 +1,50 @@
+{
+  "name": "jtk-visited-gen",
+  "version": "0.0.0",
+  "description": "A Visited Site generator with hacky way.",
+  "private": true,
+  "engines": {
+    "node": ">= 14.16 <15"
+  },
+  "devDependencies": {
+    "@types/luxon": "^1.26.5",
+    "@types/node": "~14.14.43",
+    "@types/pug": "^2.0.4",
+    "@types/qs": "^6.9.6",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "eslint": "~7.25.0",
+    "eslint-config-prettier": "~8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "~2.2.1",
+    "rimraf": "~3.0.2",
+    "surge": "^0.23.0",
+    "tsutils": "~3.21.0",
+    "typescript": "~4.2.4"
+  },
+  "scripts": {
+    "start": "node build/src/main.js",
+    "clean": "rimraf coverage build tmp",
+    "build": "tsc -p tsconfig.release.json",
+    "build:watch": "tsc -w -p tsconfig.release.json",
+    "lint": "eslint . --ext .ts,.tsx",
+    "start:gen": "node build/src/list.js",
+    "deploy": "surge --project ./dist --domain jtk-shits.surge.sh",
+    "aio": "npm run start && npm run start:gen && npm run deploy",
+    "aio:build": "npm run build && npm run aio",
+    "aio:test_build": "npm run build && npm run start && npm run start:gen"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "fs-extra": "^10.0.0",
+    "full-icu": "^1.3.4",
+    "luxon": "^1.26.0",
+    "pug": "^3.0.2",
+    "qs": "^6.10.1",
+    "tslib": "~2.2.0"
+  },
+  "volta": {
+    "node": "14.16.1"
+  }
+}

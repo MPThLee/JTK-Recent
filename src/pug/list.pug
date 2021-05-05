@@ -1,0 +1,18 @@
+- const aTagForIndex = !isSubDir ? "(<a href=\"./index.html\">Current</a>)" : ""
+- const ofStr = dir || "/"
+doctype html
+html(lang="ko")
+  head
+    title Index of !{ofStr} - JTK Recent
+    script(type="text/javascript").
+      if(location.protocol==="http:"){location.protocol="https:"}
+  body
+    h1 Index of !{ofStr} !{aTagForIndex}
+    hr
+    pre
+      if isSubDir
+        a(href="../list.html") ../
+        br
+      each item in list
+        a(href=item) #{item}
+        br

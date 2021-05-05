@@ -1,0 +1,17 @@
+name: Run ESLint
+
+on: [push, pull_request]
+
+jobs:
+  deploy:
+    name: Deploy by commit trigger.
+    runs-on: ubuntu-latest
+    if: github.event.head_commit.author.name!='dependabot\[bot\]' # ignore dependabot
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - uses: volta-cli/action@v1
+      - name: NPM CI
+        run: npm ci --no-audit
+      - name: Run lint
+        run: npm run lint
