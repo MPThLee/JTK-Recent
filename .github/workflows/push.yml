@@ -9,7 +9,7 @@ jobs:
   deploy:
     name: Deploy by commit trigger.
     runs-on: ubuntu-latest
-    if: github.event.head_commit.author.name!='dependabot\[bot\]' # ignore dependabot
+    if: "!contains(github.event.head_commit.author.name, 'dependabot')" # ignore dependabot
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
