@@ -31,6 +31,7 @@ jobs:
         env: 
           JTK_CREDENTIALS_ENC_KEY: ${{ secrets.JTK_CREDENTIALS_ENC_KEY }}
           JTK_CREDENTIALS_ENC_IV: ${{ secrets.JTK_CREDENTIALS_ENC_IV }}
+          JTK_BASEURL: ${{ secrets.JTK_BASEURL }}
 
       - name: Generate Index list
         run: npm run start:gen

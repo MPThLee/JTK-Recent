@@ -1,6 +1,9 @@
 import { SecretValues } from './types';
 import { readFileSync } from 'fs';
+import * as dotenv from 'dotenv';
 import * as crypto from 'crypto';
+
+dotenv.config();
 
 const KEY = Buffer.from(process.env.JTK_CREDENTIALS_ENC_KEY, 'hex');
 const IV = Buffer.from(process.env.JTK_CREDENTIALS_ENC_IV, 'hex');
