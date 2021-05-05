@@ -3,8 +3,8 @@ name: Run ESLint
 on: [push, pull_request]
 
 jobs:
-  deploy:
-    name: Deploy by commit trigger.
+  lint:
+    name: Check lint by commit trigger.
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.author.name, 'dependabot')" # ignore dependabot
     steps:
