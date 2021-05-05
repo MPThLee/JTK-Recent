@@ -1,6 +1,6 @@
 [![TypeScript version][ts-badge]][typescript-4-1]
 [![Node.js version][nodejs-badge]][nodejs]
-[![AGPLv2][license-badge]][license]
+[![AGPLv3][license-badge]][license]
 [![Build Status - GitHub Actions][gha-badge]][gha-ci]
 
 # JTK-Recent
@@ -8,7 +8,7 @@ Get a recent pages.
 
 ## License
 
-Licensed under the APLv2. See the [LICENSE](https://github.com/MPThLee/JTK-Recent/blob/master/LICENSE) file for details.
+Licensed under the AGPLv3. See the [LICENSE](https://github.com/MPThLee/JTK-Recent/blob/master/LICENSE) file for details.
 
 [typescript-4-1]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-1.html
 [ts-badge]: https://img.shields.io/badge/TypeScript-4.1-blue.svg
