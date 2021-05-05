@@ -1,9 +1,6 @@
 name: Rebuild GH-Pages
 
-on:
-  push:
-    branches:
-      - 'gh-pages'
+on: [workflow_dispatch]
 
 jobs:
   rebuild:
