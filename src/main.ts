@@ -13,9 +13,9 @@ dotenv.config();
 
 const baseUrl = process.env.JTK_BASEURL;
 
-async function getVisited(params: RequestParameters): Promise<ReceivedJson> {
-  const exit = () => process.exit(1);
+const exit = (code = 1) => process.exit(code);
 
+async function getVisited(params: RequestParameters): Promise<ReceivedJson> {
   const req = await axios.post(`${baseUrl}/visited.php`, stringify(params));
   if (req.status / 100 !== 2) exit();
   const data = req.data as ReceivedJson;
@@ -37,13 +37,18 @@ function generatePage(visits: VisitedField[]) {
 }
 
 async function main() {
-  const credential: RequestParameters = {
-    v: '2.59',
-    ...loadSecret(),
-  };
+  try {
+    const credential: RequestParameters = {
+      v: '2.59',
+      ...loadSecret(),
+    };
 
-  const visited = (await getVisited(credential)).visit;
-  generatePage(visited);
+    const visited = (await getVisited(credential)).visit;
+    generatePage(visited);
+  } catch (e) {
+    console.error(e);
+    exit();
+  }
 }
 
 main();

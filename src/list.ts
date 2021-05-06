@@ -28,4 +28,13 @@ export function genList(): void {
   });
 }
 
-genList();
+function main(): void {
+  try {
+    genList();
+  } catch (e) {
+    console.error(e);
+    process.exit(1);
+  }
+}
+
+main();
