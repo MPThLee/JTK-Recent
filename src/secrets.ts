@@ -1,17 +1,15 @@
 import { SecretValues } from './types';
-import { readFileSync } from 'fs';
 import * as dotenv from 'dotenv';
 import * as crypto from 'crypto';
 
 dotenv.config();
 
+const SECRETS = process.env.JTK_CREDENTIALS_ENC_SECRETS;
 const KEY = Buffer.from(process.env.JTK_CREDENTIALS_ENC_KEY, 'hex');
 const IV = Buffer.from(process.env.JTK_CREDENTIALS_ENC_IV, 'hex');
 
 export function loadSecret(): SecretValues {
-  return decryptSecret(
-    JSON.parse(readFileSync('secrets.json', 'utf-8')).secrets as string,
-  );
+  return decryptSecret(SECRETS);
 }
 
 export function decryptSecret(encrypted: string): SecretValues {

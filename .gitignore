@@ -29,3 +29,6 @@ build/
 .DS_Store
 dist/
 .env
+
+# Move to pnpm when dependabot/volta supports pnpm.
+pnpm-lock.yaml
