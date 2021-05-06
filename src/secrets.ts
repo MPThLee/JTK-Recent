@@ -1,6 +1,6 @@
 import { SecretValues } from './types';
 import { readFileSync } from 'fs';
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 import * as crypto from 'crypto';
 
 dotenv.config();

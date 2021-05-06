@@ -2,7 +2,7 @@ import axios from 'axios';
 import { stringify } from 'qs';
 import { compileFile } from 'pug';
 import { outputFileSync } from 'fs-extra';
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 
 import { ReceivedJson, RequestParameters, VisitedField } from './types';
 import './utils';
