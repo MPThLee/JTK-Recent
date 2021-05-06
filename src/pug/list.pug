@@ -10,8 +10,11 @@ html(lang="ko")
     h1 Index of !{ofStr} !{aTagForIndex}
     hr
     pre
-      if isSubDir
+      if isSubDir == 1
         a(href="../list.html") ../
+        br
+      else if isSubDir == 2
+        a(href="../") ../
         br
       each item in list
         a(href=item) #{item}
