@@ -18,7 +18,10 @@ html(lang="ko")
         .container
           h1.title JTK Recent
           h2.subtitle Get a visited sites list. (!{aTagForList})
-          p Generated on #{time}
+          p Generated on #{time}&nbsp;&nbsp;
+            if badge
+              a(href="https://github.com/MPThLee/JTK-Recent/actions/workflows/cron.ym")
+                img(src="https://github.com/MPThLee/JTK-Recent/actions/workflows/cron.yml/badge.svg" alt="Schedule Deploy")
 
       .hero-body
         .container
