@@ -1,7 +1,10 @@
 [![TypeScript version][ts-badge]][typescript-4-1]
 [![Node.js version][nodejs-badge]][nodejs]
 [![AGPLv3][license-badge]][license]
-[![Build Status - GitHub Actions][gha-badge]][gha-ci]
+[![Schedule Deploy][gha-cron-badge]][gha-cron-ci]
+
+[![Build and Deploy][gha-push-badge]][gha-push-ci]
+[![Lint Result][gha-lint-badge]][gha-lint-ci]
 
 # JTK-Recent
 Get a recent pages.
@@ -14,7 +17,11 @@ Licensed under the AGPLv3. See the [LICENSE](https://github.com/MPThLee/JTK-Rece
 [ts-badge]: https://img.shields.io/badge/TypeScript-4.1-blue.svg
 [nodejs-badge]: https://img.shields.io/badge/Node.js->=%2014.16-blue.svg
 [nodejs]: https://nodejs.org/dist/latest-v14.x/docs/api/
-[gha-badge]: https://github.com/MPThLee/JTK-Recent/actions/workflows/cron.yml/badge.svg
-[gha-ci]: https://github.com/MPThLee/JTK-Recent/actions
+[gha-cron-badge]: https://github.com/MPThLee/JTK-Recent/actions/workflows/cron.yml/badge.svg
+[gha-cron-ci]: https://github.com/MPThLee/JTK-Recent/actions/workflows/cron.yml
+[gha-push-badge]: https://github.com/MPThLee/JTK-Recent/actions/workflows/push.yml/badge.svg
+[gha-push-ci]: https://github.com/MPThLee/JTK-Recent/actions/workflows/push.yml
+[gha-lint-badge]: https://github.com/MPThLee/JTK-Recent/actions/workflows/lint.yml/badge.svg
+[gha-lint-ci]: https://github.com/MPThLee/JTK-Recent/actions/workflows/lint.yml
 [license-badge]: https://img.shields.io/badge/license-AGPLv3-blue.svg
 [license]: https://github.com/MPThLee/JTK-Recent/blob/master/LICENSE
