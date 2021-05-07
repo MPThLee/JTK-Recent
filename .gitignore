@@ -30,5 +30,5 @@ build/
 dist/
 .env
 
-# Move to pnpm when dependabot/volta supports pnpm.
+# Move to pnpm when dependabot supports pnpm.
 pnpm-lock.yaml
