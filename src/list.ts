@@ -1,6 +1,7 @@
 import { readdirSync } from 'fs';
 import { compileFile } from 'pug';
 import { outputFileSync } from 'fs-extra';
+import { exit } from './utils';
 
 export function genList(): void {
   const dir = readdirSync('./dist', { withFileTypes: true })
@@ -45,7 +46,7 @@ function main(): void {
     genList();
   } catch (e) {
     console.error(e);
-    process.exit(1);
+    exit();
   }
 }
 

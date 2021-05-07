@@ -5,15 +5,12 @@ import { outputFileSync } from 'fs-extra';
 import * as dotenv from 'dotenv';
 
 import { ReceivedJson, RequestParameters, VisitedField } from './types';
-import './utils';
-import { InternalDateTime } from './utils';
+import { exit, InternalDateTime } from './utils';
 import { loadSecret } from './secrets';
 
 dotenv.config();
 
 const baseUrl = process.env.JTK_BASEURL;
-
-const exit = (code = 1) => process.exit(code);
 
 async function getVisited(params: RequestParameters): Promise<ReceivedJson> {
   const req = await axios.post(`${baseUrl}/visited.php`, stringify(params));

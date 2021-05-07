@@ -1,5 +1,9 @@
 import { DateTime } from 'luxon';
 
+export function exit(code = 1): void {
+  process.exit(code);
+}
+
 export class InternalDateTime {
   public dt = DateTime.now()
     .setZone('Asia/Seoul')
