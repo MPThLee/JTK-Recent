@@ -47,8 +47,7 @@ jobs:
           name: dist-archive
           path: |
             dist/**/*.html
-            !dist/index.html
-            !dist/list.html
+            !.gitkeep
 
       # == DO NOT BACKUP IF TRIGGERED BY PUSH EVENT ==
       # - name: Deploy to gh-pages branch (Backup, Save)
