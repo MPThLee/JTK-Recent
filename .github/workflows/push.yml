@@ -53,6 +53,7 @@ jobs:
           path: |
             dist/**/*.html
             !.gitkeep
+            !404.html
 
       # == DO NOT BACKUP IF TRIGGERED BY PUSH EVENT ==
       # - name: Deploy to gh-pages branch (Backup, Save)

@@ -30,7 +30,7 @@
     "build:watch": "tsc -w -p tsconfig.release.json",
     "lint": "eslint . --ext .ts,.tsx",
     "start:gen": "node build/src/list.js",
-    "deploy": "surge --project ./dist --domain jtk-shits.surge.sh",
+    "deploy": "surge --project ./dist --domain jtk-test-env.surge.sh",
     "aio": "npm run start && npm run start:gen && npm run deploy",
     "aio:build": "npm run build && npm run aio",
     "aio:test_build": "npm run build && npm run start && npm run start:gen"

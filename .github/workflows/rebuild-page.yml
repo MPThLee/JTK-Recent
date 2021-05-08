@@ -44,6 +44,7 @@ jobs:
           path: |
             dist/**/*.html
             !.gitkeep
+            !404.html
 
       - name: Deploy to gh-pages branch (Backup, Save)
         uses: JamesIves/github-pages-deploy-action@4.1.1
