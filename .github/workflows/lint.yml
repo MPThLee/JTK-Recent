@@ -6,7 +6,6 @@ jobs:
   lint:
     name: Run ESLint.
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.author.name, 'dependabot')" # ignore dependabot
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
