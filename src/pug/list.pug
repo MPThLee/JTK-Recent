@@ -1,21 +1,21 @@
-- const aTagForIndex = !isSubDir ? "(<a href=\"./index.html\">Current</a>)" : ""
-- const ofStr = dir || "/"
+- const aTagForIndex = !isSubDir ? '(<a href="./index.html">Current</a>)' : "";
+- const ofStr = dir || "/";
 doctype html
-html(lang="ko")
+html(lang='ko')
   head
-    title Index of !{ofStr} - JTK Recent
-    script(type="text/javascript").
+    title Index of !{ ofStr } - JTK Recent
+    script(type='text/javascript').
       if(location.protocol==="http:"){location.protocol="https:"}
   body
-    h1 Index of !{ofStr} !{aTagForIndex}
+    h1 Index of !{ ofStr } !{ aTagForIndex }
     hr
     pre
       if isSubDir == 1
-        a(href="../list.html") ../
+        a(href='../list.html') ../
         br
       else if isSubDir == 2
-        a(href="../") ../
+        a(href='../') ../
         br
       each item in list
-        a(href=item) #{item}
+        a(href=item) #{ item }
         br

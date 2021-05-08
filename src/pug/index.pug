@@ -1,28 +1,36 @@
 - const getUrlWithoutEpisode = ( url ) => {
--  const last = url.substring(url.lastIndexOf('/') + 1); 
--  return Number(last) == last ? url.slice(0, url.lastIndexOf("/")) : url
+- const last = url.substring(url.lastIndexOf("/") + 1);
+- return Number(last) == last ? url.slice(0, url.lastIndexOf("/")) : url;
 - }
-- const aTagForList = "<a href=\"/list.html\">Time-generated lists</a>"
+- const aTagForList = '<a href="/list.html">Time-generated lists</a>';
 doctype html
-html(lang="ko")
+html(lang='ko')
   head
     title JTK Recent
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css")
-    script(defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js")
-    script(type="text/javascript").
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(
+      rel='stylesheet',
+      href='https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css'
+    )
+    script(defer, src='https://use.fontawesome.com/releases/v5.14.0/js/all.js')
+    script(type='text/javascript').
       if(location.protocol==="http:"){location.protocol="https:"}
   body
     section.hero.is-info
       .hero-head
         .container
           h1.title JTK Recent
-          h2.subtitle Get a visited sites list. (!{aTagForList})
-          p Generated on #{time}
+          h2.subtitle Get a visited sites list. (!{ aTagForList })
+          p Generated on #{ time }
             if badge
               | &nbsp;&nbsp;
-              a(href="https://github.com/MPThLee/JTK-Recent/actions/workflows/cron.yml")
-                img(src="https://github.com/MPThLee/JTK-Recent/actions/workflows/cron.yml/badge.svg" alt="Schedule Deploy")
+              a(
+                href='https://github.com/MPThLee/JTK-Recent/actions/workflows/cron.yml'
+              )
+                img(
+                  src='https://github.com/MPThLee/JTK-Recent/actions/workflows/cron.yml/badge.svg',
+                  alt='Schedule Deploy'
+                )
 
       .hero-body
         .container
@@ -34,11 +42,19 @@ html(lang="ko")
             tbody
               each val, index in visits
                 tr
-                  th #{index + 1}
+                  th #{ index + 1 }
                   td 
-                    a(href="https://" +  getUrlWithoutEpisode(val.url) target="_blank" rel="noreferrer") #{val.title}
+                    a(
+                      href="https://" + getUrlWithoutEpisode(val.url),
+                      target='_blank',
+                      rel='noreferrer'
+                    ) #{ val.title }
                     br
-                    a(href="https://" + val.url target="_blank" rel="noreferrer") #{val.url}
+                    a(
+                      href="https://" + val.url,
+                      target='_blank',
+                      rel='noreferrer'
+                    ) #{ val.url }
 
       .hero-footer
         .container
