@@ -1,11 +1,12 @@
 #!/bin/bash
-IFS=';'
 
-# For run command below.
+# For run command below, Install any node version first.
 volta install node --verbose
-ITEMS=`node -p "Object.entries(require('./package.json').volta).map(i => i[0] + '@' + i[1]).join('$IFS')"`
 
-for item in $ITEMS; do
+IFS=';'
+VOLTA_TOOLS=`node -p "Object.entries(require('./package.json').volta).map(i => i[0] + '@' + i[1]).join('$IFS')"`
+
+for item in $VOLTA_TOOLS; do
     echo "Install $item via volta..."
     volta install $item --verbose
 done

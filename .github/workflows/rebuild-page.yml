@@ -12,6 +12,8 @@ jobs:
         uses: actions/checkout@v2
 
       - uses: volta-cli/action@v1
+      - name: Install Toolchain via volta
+        run: bash .github/_initVolta.sh
 
       - name: Checkout gh-pages branch
         uses: actions/checkout@v2
