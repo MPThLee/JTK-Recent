@@ -13,7 +13,7 @@ Get a recent pages.
 
 Licensed under the AGPL-3.0. See the [LICENSE](https://github.com/MPThLee/JTK-Recent/blob/master/LICENSE) file for details.
 
-[typescript-4-1]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-1.html
+[typescript-4-2]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-1.html
 [ts-badge]: https://img.shields.io/badge/TypeScript-4.2-blue.svg
 [nodejs-badge]: https://img.shields.io/badge/Node.js->=%2016.1-blue.svg
 [nodejs]: https://nodejs.org/dist/latest-v14.x/docs/api/
@@ -23,5 +23,5 @@ Licensed under the AGPL-3.0. See the [LICENSE](https://github.com/MPThLee/JTK-Re
 [gha-push-ci]: https://github.com/MPThLee/JTK-Recent/actions/workflows/push.yml
 [gha-lint-badge]: https://github.com/MPThLee/JTK-Recent/actions/workflows/lint.yml/badge.svg
 [gha-lint-ci]: https://github.com/MPThLee/JTK-Recent/actions/workflows/lint.yml
-[license-badge]: https://img.shields.io/badge/license-AGPL-3.0-blue.svg
+[license-badge]: https://img.shields.io/badge/license-AGPL--3.0-blue.svg
 [license]: https://github.com/MPThLee/JTK-Recent/blob/master/LICENSE
