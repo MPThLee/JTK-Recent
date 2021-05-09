@@ -16,7 +16,7 @@ Licensed under the AGPL-3.0. See the [LICENSE](https://github.com/MPThLee/JTK-Re
 [typescript-4-2]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-2.html
 [ts-badge]: https://img.shields.io/badge/TypeScript-4.2-blue.svg
 [nodejs-badge]: https://img.shields.io/badge/Node.js->=%2016.1-blue.svg
-[nodejs]: https://nodejs.org/dist/latest-v14.x/docs/api/
+[nodejs]: https://nodejs.org/dist/latest-v16.x/docs/api/
 [gha-cron-badge]: https://github.com/MPThLee/JTK-Recent/actions/workflows/cron.yml/badge.svg
 [gha-cron-ci]: https://github.com/MPThLee/JTK-Recent/actions/workflows/cron.yml
 [gha-push-badge]: https://github.com/MPThLee/JTK-Recent/actions/workflows/push.yml/badge.svg
