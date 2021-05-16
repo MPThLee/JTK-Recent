@@ -8,6 +8,8 @@
     "node": ">= 16.1 <17"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@prettier/plugin-pug": "~1.15.2",
     "@types/luxon": "~1.26.5",
     "@types/minimist": "~1.2.1",
@@ -19,6 +21,7 @@
     "eslint": "~7.26.0",
     "eslint-config-prettier": "~8.3.0",
     "eslint-plugin-prettier": "~3.4.0",
+    "husky": "^6.0.0",
     "prettier": "~2.3.0",
     "rimraf": "~3.0.2",
     "surge": "~0.23.0",
@@ -35,7 +38,8 @@
     "deploy": "surge --project ./dist --domain jtk-test-env.surge.sh",
     "aio": "npm run start && npm run start:gen && npm run deploy",
     "aio:build": "npm run build && npm run aio",
-    "aio:test_build": "npm run build && npm run start && npm run start:gen"
+    "aio:test_build": "npm run build && npm run start && npm run start:gen",
+    "prepare": "husky install"
   },
   "dependencies": {
     "axios": "~0.21.1",
@@ -51,6 +55,6 @@
   "volta": {
     "node": "16.1.0",
     "npm": "7.13.0",
-    "pnpm": "6.2.5"
+    "pnpm": "6.3.0"
   }
 }
