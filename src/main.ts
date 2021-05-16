@@ -5,12 +5,13 @@ import { outputFileSync } from 'fs-extra';
 import * as dotenv from 'dotenv';
 
 import { ReceivedJson, RequestParameters, VisitedField } from './types';
-import { exit, InternalDateTime } from './utils';
+import { exit, getBaseDistDir, InternalDateTime } from './utils';
 import { loadSecret } from './secrets';
 
 dotenv.config();
 
 const baseUrl = process.env.JTK_BASEURL;
+const basedir = getBaseDistDir();
 
 async function getVisited(params: RequestParameters): Promise<ReceivedJson> {
   const req = await axios.post(`${baseUrl}/visited.php`, stringify(params));
@@ -30,8 +31,8 @@ function generatePage(visits: VisitedField[]) {
     visits,
     time,
   };
-  outputFileSync('dist/index.html', compile({ badge: true, ...option }));
-  outputFileSync(`dist/${fileTime}.html`, compile(option));
+  outputFileSync(`${basedir}/index.html`, compile({ badge: true, ...option }));
+  outputFileSync(`${basedir}/${fileTime}.html`, compile(option));
 }
 
 async function main() {

@@ -1,10 +1,12 @@
 import { readdirSync } from 'fs';
 import { compileFile } from 'pug';
 import { outputFileSync } from 'fs-extra';
-import { exit } from './utils';
+import { exit, getBaseDistDir } from './utils';
 
 export function genList(): void {
-  const dir = readdirSync('./dist', { withFileTypes: true })
+  const basedir = getBaseDistDir();
+
+  const dir = readdirSync(basedir, { withFileTypes: true })
     .filter((_) => _.isDirectory())
     .map((_) => _.name)
     .filter((_) => !_.startsWith('.'));
@@ -14,10 +16,10 @@ export function genList(): void {
   const compiled = compiledFunction({
     list,
   });
-  outputFileSync('dist/list.html', compiled);
+  outputFileSync(`${basedir}/list.html`, compiled);
 
   dir.forEach((dirname1) => {
-    const dir = readdirSync(`./dist/${dirname1}`).filter(
+    const dir = readdirSync(`${basedir}/${dirname1}`).filter(
       (_) => _ !== 'index.html',
     );
     const list = dir.map((_) => _ + '/');
@@ -26,9 +28,9 @@ export function genList(): void {
       isSubDir: 1,
       dir: `/${dirname1}/`,
     });
-    outputFileSync(`dist/${dirname1}/index.html`, compiled);
+    outputFileSync(`${basedir}/${dirname1}/index.html`, compiled);
     dir.forEach((dirname2) => {
-      const list = readdirSync(`./dist/${dirname1}/${dirname2}`).filter(
+      const list = readdirSync(`${basedir}/${dirname1}/${dirname2}`).filter(
         (_) => _ !== 'index.html',
       );
       const compiled = compiledFunction({
@@ -36,7 +38,7 @@ export function genList(): void {
         isSubDir: 2,
         dir: `/${dirname1}/${dirname2}/`,
       });
-      outputFileSync(`dist/${dirname1}/${dirname2}/index.html`, compiled);
+      outputFileSync(`${basedir}/${dirname1}/${dirname2}/index.html`, compiled);
     });
   });
 }
