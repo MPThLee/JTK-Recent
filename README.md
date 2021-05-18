@@ -7,6 +7,7 @@
 [![Lint Result][gha-lint-badge]][gha-lint-ci]
 
 # JTK-Recent
+
 Get a recent pages.
 
 ## License
