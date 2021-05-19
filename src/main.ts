@@ -26,13 +26,12 @@ function generatePage(visits: VisitedField[]) {
   const time = date.toInternalFormat();
   const fileTime = date.toFileTimeFormat();
   const compiledFunction = compileFile('src/pug/index.pug');
-  const compile = (opt) => compiledFunction(opt);
-  const option = {
+  const compiled = compiledFunction({
     visits,
     time,
-  };
-  outputFileSync(`${basedir}/index.html`, compile({ badge: true, ...option }));
-  outputFileSync(`${basedir}/${fileTime}.html`, compile(option));
+  });
+  outputFileSync(`${basedir}/index.html`, compiled);
+  outputFileSync(`${basedir}/${fileTime}.html`, compiled);
 }
 
 async function main() {

@@ -22,16 +22,6 @@ html(lang='ko')
           h1.title JTK Recent
           h2.subtitle Get a visited sites list. (!{ aTagForList })
           p Generated on #{ time }
-            if badge
-              | &nbsp;&nbsp;
-              a(
-                href='https://github.com/MPThLee/JTK-Recent/actions/workflows/cron.yml'
-              )
-                img(
-                  src='https://github.com/MPThLee/JTK-Recent/actions/workflows/cron.yml/badge.svg',
-                  alt='Schedule Deploy'
-                )
-
       .hero-body
         .container
           table.table
@@ -61,3 +51,12 @@ html(lang='ko')
           p This page is automatically generated with GitHub Actions.
           p 
             a(href="https://githubstatus.com/") Check GitHub Status on here.
+          p
+            | Recent deploy schedule result: &nbsp;
+            a(
+              href='https://github.com/MPThLee/JTK-Recent/actions/workflows/cron.yml'
+            )
+              img(
+                src='https://github.com/MPThLee/JTK-Recent/actions/workflows/cron.yml/badge.svg',
+                alt='Schedule Deploy'
+              )
