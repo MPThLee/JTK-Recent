@@ -8,8 +8,8 @@
     "node": ">= 16.1 <17"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/cli": "~12.1.4",
+    "@commitlint/config-conventional": "~12.1.4",
     "@prettier/plugin-pug": "~1.15.2",
     "@types/luxon": "~1.26.5",
     "@types/minimist": "~1.2.1",
@@ -21,7 +21,7 @@
     "eslint": "~7.26.0",
     "eslint-config-prettier": "~8.3.0",
     "eslint-plugin-prettier": "~3.4.0",
-    "husky": "^6.0.0",
+    "husky": "~6.0.0",
     "prettier": "~2.3.0",
     "rimraf": "~3.0.2",
     "surge": "~0.23.0",
