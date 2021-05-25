@@ -70,7 +70,6 @@ jobs:
 
       - name: Deploy to surge.sh (Prod)
         uses: dswistowski/surge-sh-action@v1.0.1
-        continue-on-error: true
         with:
           domain: '${{ secrets.surge_domain }}'
           project: './dist'
