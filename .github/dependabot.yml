@@ -6,11 +6,11 @@ updates:
       interval: 'daily'
     open-pull-requests-limit: 10
     commit-message:
-      prefix: 'chore(npm)'
+      prefix: 'chore(npm): :arrow_up:'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
       interval: 'daily'
     commit-message:
-      prefix: 'chore(actions)'
+      prefix: 'chore(actions): :arrow_up:'
