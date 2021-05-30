@@ -10,8 +10,8 @@ jobs:
     if: "!contains(github.event.head_commit.author.name, 'dependabot')" # ignore dependabot
     steps:
       - uses: volta-cli/action@v1.7.0
-      - name: Install Toolchain via volta
-        run: bash .github/.initVolta.sh
+      - name: Install Surge via volta
+        run: volta install surge
 
       - name: Checkout gh-pages branch
         uses: actions/checkout@v2.3.4
