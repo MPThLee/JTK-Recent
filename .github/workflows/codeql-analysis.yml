@@ -29,7 +29,7 @@ jobs:
       contents: read
       security-events: write
     
-    if: (github.actor == 'dependabot[bot]' && github.event_name == "push") == false
+    if: (github.actor == 'dependabot[bot]' && github.event_name == 'push') == false
 
     strategy:
       fail-fast: false
