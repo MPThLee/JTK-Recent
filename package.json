@@ -14,7 +14,7 @@
     "@types/luxon": "~1.27.1",
     "@types/minimist": "~1.2.2",
     "@types/node": "~15.14.0",
-    "@types/pug": "~2.0.4",
+    "@types/pug": "~2.0.5",
     "@types/qs": "~6.9.7",
     "@typescript-eslint/eslint-plugin": "~4.28.2",
     "@typescript-eslint/parser": "~4.28.2",
