@@ -16,7 +16,7 @@ const basedir = getBaseDistDir();
 async function getVisited(params: RequestParameters): Promise<ReceivedJson> {
   const req = await axios.post(`${baseUrl}/visited.php`, stringify(params));
   if (req.status / 100 !== 2) exit();
-  const data = req.data as ReceivedJson;
+  const data: ReceivedJson = req.data as unknown as ReceivedJson;
   if (data.errCode < 0) exit();
   return data;
 }
