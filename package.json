@@ -11,7 +11,7 @@
     "@commitlint/cli": "~13.2.0",
     "@commitlint/config-conventional": "~13.2.0",
     "@prettier/plugin-pug": "~1.16.7",
-    "@types/luxon": "~2.0.4",
+    "@types/luxon": "~2.0.5",
     "@types/minimist": "~1.2.2",
     "@types/node": "~16.10.3",
     "@types/pug": "~2.0.5",
