@@ -13,7 +13,7 @@
     "@prettier/plugin-pug": "~1.17.1",
     "@types/luxon": "~2.0.5",
     "@types/minimist": "~1.2.2",
-    "@types/node": "~16.11.6",
+    "@types/node": "~16.11.9",
     "@types/pug": "~2.0.5",
     "@types/qs": "~6.9.7",
     "@typescript-eslint/eslint-plugin": "~4.33.0",
