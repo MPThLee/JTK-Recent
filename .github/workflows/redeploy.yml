@@ -19,7 +19,7 @@ jobs:
           ref: 'gh-pages'
           path: dist
 
-      - name: Deploy to surge.sh (Prod)
+      - name: Deploy to surge.sh (Backup)
         uses: dswistowski/surge-sh-action@v1.0.1
         with:
           domain: '${{ secrets.surge_domain }}'

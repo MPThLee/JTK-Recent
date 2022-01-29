@@ -55,7 +55,7 @@ jobs:
             !dist/.gitkeep
             !dist/404.html
 
-      - name: Deploy to gh-pages branch (Backup, Save)
+      - name: Deploy to gh-pages branch (Backup, Pre-Prod)
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
           branch: gh-pages # The branch the action should deploy to.
@@ -66,8 +66,9 @@ jobs:
           git-config-name: 'github-actions[bot]'
           git-config-email: '41898282+github-actions[bot]@users.noreply.github.com'
 
-      - name: Deploy to surge.sh (Prod)
+      - name: Deploy to surge.sh (Backup)
         uses: dswistowski/surge-sh-action@v1.0.1
+        continue-on-error: true
         with:
           domain: '${{ secrets.surge_domain }}'
           project: './dist'
