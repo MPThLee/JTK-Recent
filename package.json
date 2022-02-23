@@ -44,7 +44,7 @@
   "dependencies": {
     "axios": "~0.26.0",
     "dotenv": "~16.0.0",
-    "fs-extra": "~10.0.0",
+    "fs-extra": "~10.0.1",
     "full-icu": "~1.4.0",
     "luxon": "~2.3.0",
     "minimist": "~1.2.5",
