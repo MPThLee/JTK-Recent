@@ -47,7 +47,7 @@ jobs:
         run: npm run start:gen
 
       - name: Archive dist artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: dist-archive
           path: |
