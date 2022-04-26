@@ -42,7 +42,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "axios": "~0.26.1",
+    "axios": "~0.27.1",
     "dotenv": "~16.0.0",
     "fs-extra": "~10.1.0",
     "full-icu": "~1.4.0",
