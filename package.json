@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "~17.0.2",
-    "@commitlint/config-conventional": "~17.0.2",
+    "@commitlint/config-conventional": "~17.0.3",
     "@prettier/plugin-pug": "~2.1.1",
     "@types/luxon": "~2.3.2",
     "@types/minimist": "~1.2.2",
