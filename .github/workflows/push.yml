@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - uses: volta-cli/action@v1.7.0
+      - uses: volta-cli/action@v3.0.2
       - name: Install Toolchain via volta
         run: bash .github/.initVolta.sh
 

@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.author.name, 'dependabot')" # ignore dependabot
     steps:
-      - uses: volta-cli/action@v1.7.0
+      - uses: volta-cli/action@v3.0.2
       - name: Install Surge via volta
         run: volta install node && volta install surge
 
