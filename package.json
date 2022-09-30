@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "axios": "~0.27.2",
-    "dotenv": "~16.0.2",
+    "dotenv": "~16.0.3",
     "fs-extra": "~10.1.0",
     "full-icu": "~1.5.0",
     "luxon": "~3.0.4",
