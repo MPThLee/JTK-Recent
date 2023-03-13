@@ -25,7 +25,7 @@ jobs:
           ref: 'gh-pages'
           path: dist
       - name: Initialize npm cache
-        uses: actions/cache@v3.3.0
+        uses: actions/cache@v3.3.1
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
