@@ -8,7 +8,7 @@
     "node": ">= 16.1 <17"
   },
   "devDependencies": {
-    "@commitlint/cli": "~17.6.7",
+    "@commitlint/cli": "~17.7.0",
     "@commitlint/config-conventional": "~17.6.7",
     "@prettier/plugin-pug": "~2.5.2",
     "@types/luxon": "~3.3.1",
