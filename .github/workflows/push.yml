@@ -13,14 +13,14 @@ jobs:
     if: "!contains(github.event.head_commit.author.name, 'dependabot')" # ignore dependabot
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - uses: volta-cli/action@v4.0.1
       - name: Install Toolchain via volta
         run: bash .github/.initVolta.sh
 
       - name: Checkout gh-pages branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: 'gh-pages'
           path: dist
