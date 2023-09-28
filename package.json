@@ -10,7 +10,7 @@
   "devDependencies": {
     "@commitlint/cli": "~17.7.1",
     "@commitlint/config-conventional": "~17.7.0",
-    "@prettier/plugin-pug": "~2.5.2",
+    "@prettier/plugin-pug": "~3.0.0",
     "@types/luxon": "~3.3.2",
     "@types/minimist": "~1.2.3",
     "@types/node": "~20.7.1",
@@ -22,7 +22,7 @@
     "eslint-config-prettier": "~9.0.0",
     "eslint-plugin-prettier": "~4.2.1",
     "husky": "~8.0.3",
-    "prettier": "~2.8.8",
+    "prettier": "~3.0.3",
     "rimraf": "~5.0.5",
     "surge": "~0.23.1",
     "tsutils": "~3.21.0",
