@@ -15,7 +15,7 @@
     "@types/minimist": "~1.2.4",
     "@types/node": "~20.8.10",
     "@types/pug": "~2.0.8",
-    "@types/qs": "~6.9.9",
+    "@types/qs": "~6.9.10",
     "@typescript-eslint/eslint-plugin": "~5.61.0",
     "@typescript-eslint/parser": "~5.62.0",
     "eslint": "~8.53.0",
