@@ -13,7 +13,7 @@ jobs:
       - name: Install Toolchain via volta
         run: bash .github/.initVolta.sh
       - name: Initialize npm cache
-        uses: actions/cache@v3.3.3
+        uses: actions/cache@v4.0.0
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
