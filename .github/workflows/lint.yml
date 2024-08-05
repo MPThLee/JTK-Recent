@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - uses: volta-cli/action@v4.1.1
+      - uses: volta-cli/action@v4.2.0
       - name: Install Toolchain via volta
         run: bash .github/.initVolta.sh
       - name: Initialize npm cache
