@@ -20,7 +20,7 @@ jobs:
           path: dist
 
       - name: Deploy to surge.sh (Backup)
-        uses: dswistowski/surge-sh-action@v1.0.2
+        uses: dswistowski/surge-sh-action@v1.1.0
         with:
           domain: '${{ secrets.surge_domain }}'
           project: './dist'
